@@ -103,16 +103,16 @@ disp(resp(2:2:end))
 vect=12:-1:1
 %a- all of the numbers will be the same
 vect(1:12)
-%b- 12 11 10 ... 1 (exactly the same)
+%b-
 vect(12:-1:1)
-%c- 3 1 4 1 5 9 (the 10th value, 12th value,...etc)
+%c
 vect([10 12 9 12 8 4])
-%d- 12 11
+%d
 vect(1:2)
-%e 1 2
+%e
 vect(vect(1:2))
-%f 1 2 3 4 5 6 7 8 9 10 11 12
+%f
 vect(vect)
-%g 12 11 10 9 8 7 6 5 4 3 2 1 
+%g
 vect(vect(vect))
 
