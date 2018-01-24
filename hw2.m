@@ -10,7 +10,7 @@ str='A PACK OF LIES';
 str(3)='l'
 str(11)='P'
 % b) Start with a string containing It’s pouring with rain and replace the p with an r and the r with a p.
-str2='It s pouring with rain';
+str2='It''s pouring with rain'; % clever eh!
 str2(6)='r'
 str2([9 19])='p'
 % c) Now try to do this for both a) and b) in a single line of code.
@@ -64,7 +64,9 @@ f=20:-1:1;
 disp(str4(f))
 
 % e) Demonstrate that the 6th, 13th and 17th letters in the reversed string are ‘pzx’.
-str4([6 13 17])='pzx'
+str4([6 13 17])='pzx' % no, that's setting those values to be pzx, should be
+rev=str4(f);
+rev([6 13 17])
 
 %% Q 2.5: Indexing into vectors
  
