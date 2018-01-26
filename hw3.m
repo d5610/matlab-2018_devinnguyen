@@ -61,7 +61,8 @@ w=ones(12,1)./12;
 dot(w,num_shares)
 
 %help!! Got this function online but don't quite understand this concept
-% w= ones(12,1)./12; doesn't create a column of 0.0833 twelve times...that equals ~1
+% I understand that w= ones(12,1)./12; creates a column of 0.0833 twelve times...that equals ~1
+%so im confused why w*av_shares won't work
 
 % d) Use pointwise division to get the probability of sharing on a given peer 
 % interaction for each child (prob_share) 
