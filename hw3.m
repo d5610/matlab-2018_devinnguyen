@@ -40,6 +40,15 @@ mean(vect)
 ind=find(vect/2==round(vect/2));
 mean(vect(ind))
  
+% or alternatively
+vect=[1:15].^2;
+mean(vect)
+
+% b) Calculate the mean of the even numbers of vect.
+vect=[2:2:14].^2;
+mean(vect)
+
+
 % ans= 80
 
 %% Q 3.7: Inner and Outer Products
