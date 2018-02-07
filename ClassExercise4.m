@@ -7,8 +7,8 @@ a=ones(5);
 a(3:5,:)=2
 
 %b
-b=ones(4,5);
-b(:,3:4)=0
+b=zeros(4,5);
+b(:, [1 2 5])=1
 
 % c
 c=ones(6,5);
@@ -17,7 +17,7 @@ c(2:4,2:3)=0
 % d
 d=zeros(5);
 for i=1:5
-    d(:,i)=[ 1 2 3 4 5 ];
+    d(:,i)=[1:5];
 end
 d
 
@@ -41,9 +41,13 @@ f
 
 % g
 for i=1:5
-    g(:,i)=[ 1 2 3 4 5 ]+((i-1)*5);
+    g(:,i)=[1:5]+((i-1)*5);
 end
 g
+
+% or
+
+g=reshape(1:25,5,5)
 
 % h
 h=zeros(8);
@@ -60,12 +64,24 @@ for I=1:2:8
 end
 I
 
+%or
+
+J=zeros(8);
+for i=1:2:8;
+    J(i,i)=1;
+end
+I
+
 % j
 J=ones(5);
 for i=1:5
-    J(:,i)=[ 0 1 2 3 4]+(i-1);
+    J(:,i)=[0:4]+(i-1);
 end
 J
+
+for i=1:5
+    J(i,:)=[0:4]+(i-1)
+end
 
 % k
 for i=1:5 
@@ -77,6 +93,10 @@ k
 for i-1:5
     l(i,:)=[1:5]+((i-1)*5);
 end
+
+%or
+
+L=reshape(1:25,5,5)';
 
 %% 4.2
 % a
@@ -103,10 +123,31 @@ elseif x<0
 end
 
 % b
-x<2 || x>pi
+x<2 || x>pi;
+
+x=-1;
+if x<2 || x>pi
+    disp('this is true')
+end
 
 % c
-(x>2 && y<4) || z==0
+(x>2 && y<4)||z==0
+
+x=4; y=2; z=0;
+if (x>2 && y<4) || z==0
+    disp('this is true')
+end
 
 
 %% 4.5
+roll=ceil(rand(1,2)*6);
+counter=1;
+
+while sum(roll)>2 %greater than snake eyes (2); NO
+    counter=counter+1;
+    roll=ceil(rand(1,2)*6);
+end
+
+disp(['snake eyes at ', num2str(counter),'rolls']);
+
+
