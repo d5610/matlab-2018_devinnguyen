@@ -140,5 +140,6 @@ ratID(find(mnper66>66))
 per80=per>80;
 numover80=sum(per80,2); % how many rats over 80 on each time point
 minTover80=find(numover80>40);
+minTover80(1);
 binsteps(minTover80(1))
 % f) It turns out that for the rats with even ID numbers (2, 4, 6 10 etc.) the recording machine was on the blink for an interval between the 5678th trial and the 7533rd trial. Convert those numbers to NaN.
