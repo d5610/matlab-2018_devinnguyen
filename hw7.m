@@ -1,4 +1,4 @@
-%% Q7.1 Structures
+% %% Q7.1 Structures
 
 % create a structure, mystruct that contains 3 fields.
 % mystring : which contains your name
